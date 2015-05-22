@@ -1,10 +1,12 @@
 CC=gcc
 CFLAGS=-c -I../include/
-EXECUTABLE=test
-SOURCES=levenshtein.c
+SOURCES=*.c
+OBDIR=build
+
 .o:
 	$(CC) $(CFLAGS) $(SOURCES)
+	mv *.o $(OBDIR)
 all: .o
-	$(CC) *.o -o $(EXECUTABLE)
+	
 clean:
-	rm -f *.o $(EXECUTABLE)
+	rm -f $(OBDIR)/*.o
