@@ -8,7 +8,7 @@
 int Levenshtein(char* str1, char* str2);
 int min(int a, int b);
 int LSH(char* str);
-void number_removal(char* str);
+char* number_removal(const char* str);
 
 
 #endif //TOOLS_H
