@@ -1,5 +1,5 @@
-#ifndef COMMON_H
-#define COMMON_H
+#ifndef TOOLS_H
+#define TOOLS_H
 
 #include<string.h>
 #include<stdlib.h>
@@ -11,4 +11,4 @@ int LSH(char* str);
 void number_removal(char* str);
 
 
-#endif
+#endif //TOOLS_H
