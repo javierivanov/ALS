@@ -7,8 +7,15 @@
 
 int Levenshtein(char* str1, char* str2);
 int min(int a, int b);
-int LSH(char* str);
 char* number_removal(const char* str);
+void plot(const char* str, int);
+void showAscii();
 
+typedef struct _results
+{
+    int* data;
+    size_t s;
+} results;
 
+results LSH(const char* str);
 #endif //TOOLS_H
