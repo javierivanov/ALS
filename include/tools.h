@@ -10,7 +10,7 @@ int min(int a, int b);
 char* number_removal(const char* str);
 void plot(const char* str, int);
 void showAscii();
-
+int filter(const char c);
 typedef struct _results
 {
     int* data;

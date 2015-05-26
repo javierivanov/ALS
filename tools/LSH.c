@@ -1,5 +1,6 @@
 #include "tools.h"
 #include <stdio.h>
+
 void plot(const char* str, int filter){
     int l = strlen(str);
     int i;

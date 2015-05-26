@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Iinclude/
+CFLAGS=-g -Iinclude/
 EXEC=test
 
 main:
