@@ -1,2 +1,2 @@
 # ALS
-<b>TOOLS/</b>: herramientas para clustering.
+<b>TOOLS/</b>: herramientas para clustering
