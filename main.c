@@ -19,7 +19,8 @@ int main(int argc, char* argv[])
                 dr = LSH(line);
                 for (j=0; j < dr.s; j++)
                 {
-                    printf("%d %d\n", j, dr.data[j]);
+                    //printf("%d %d\n", j, dr.data[j]);
+                    printf("%d\n", LSH_gen(dr));
                 }
             }
             if (plotv == 1)

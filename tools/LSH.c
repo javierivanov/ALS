@@ -60,3 +60,16 @@ results LSH(const char* str)
     }
     return r;
 }
+
+int LSH_gen(const results r)
+{
+    int out = 0;
+    for (int i=r.s-1; i >= 0; i--)
+    {
+        out += (int)pow(r.data[i], i);
+    }
+    return out;
+}
+
+
+

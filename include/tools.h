@@ -4,6 +4,7 @@
 #include<string.h>
 #include<stdlib.h>
 #include<omp.h>
+#include<math.h>
 
 int Levenshtein(char* str1, char* str2);
 int min(int a, int b);
@@ -18,4 +19,6 @@ typedef struct _results
 } results;
 
 results LSH(const char* str);
+int LSH_gen(const results r);
+
 #endif //TOOLS_H

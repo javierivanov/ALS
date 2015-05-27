@@ -4,7 +4,7 @@ SOURCES=*.c
 OBDIR=build
 
 .o:
-	$(CC) $(CFLAGS) $(SOURCES)
+	$(CC) $(CFLAGS) $(LIBS) $(SOURCES)
 	mv *.o $(OBDIR)
 all: .o
 	
