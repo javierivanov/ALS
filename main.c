@@ -1,5 +1,6 @@
 #include "tools.h"
 #include <stdio.h>
+#include <openssl/md5.h>
 int main(int argc, char* argv[])
 {
     FILE* fp;
@@ -12,6 +13,7 @@ int main(int argc, char* argv[])
     int j;
     int lin = atoi(argv[2]);
     int plotv = atoi(argv[3]);
+
     results dr;
     while((read = getline(&line, &len, fp)) != -1){
         if (i++ == lin){
