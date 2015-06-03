@@ -8,13 +8,7 @@ void plot(const char* str, int filter){
     {
         int c=(int)(str[i]);
         if (filter){
-            if (c <= 47) c = 1;
-            if (c > 47 && c <= 57) c=2;
-            if (c >= 58 && c <= 64) c=1;
-            if (c > 64 && c <= 90) c=3;
-            if (c >= 91 && c <= 96) c=1;
-            if (c >= 97 && c <= 122) c=3;
-            if (c > 122) c=1;
+          c = filter(str[i]);
         }
         printf("%d %d\n", i, c);
     }
@@ -40,6 +34,11 @@ int filter(const char cs)
     if (c >= 97 && c <= 122) c=3;
     if (c > 122) c=1;
     return c;
+}
+
+int filter2(const char cs)
+{
+
 }
 
 results LSH(const char* str)
@@ -71,6 +70,3 @@ int LSH_gen(const results r)
     }
     return out;
 }
-
-
-
