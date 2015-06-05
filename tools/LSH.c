@@ -1,13 +1,13 @@
 #include "tools.h"
 #include <stdio.h>
 
-void plot(const char* str, int filter){
+void plot(const char* str, int f){
     int l = strlen(str);
     int i;
     for (i=0; i < l; i++)
     {
         int c=(int)(str[i]);
-        if (filter){
+        if (f){
           c = filter(str[i]);
         }
         printf("%d %d\n", i, c);

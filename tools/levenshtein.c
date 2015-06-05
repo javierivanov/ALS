@@ -18,9 +18,9 @@ int Levenshtein(char *s1,char *s2)
     m=(int*)malloc(sizeof(int)*(t1+1)*(t2+1));
     if (m==NULL) return(-1); // ERROR!!
 
-#pragma omp parallel for
+    #pragma omp parallel for
     for (i=0;i<=t1;i++) m[i]=i;
-#pragma omp parallel for
+    #pragma omp parallel for
     for (j=0;j<=t2;j++) m[j*ancho]=j;
 
     for (i=1;i<=t1;i++) for (j=1;j<=t2;j++)
