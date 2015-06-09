@@ -10,7 +10,8 @@ def average(d):
     return a/len(d)
 
 
-def filter(c):
+def filter(text):
+    
     c = ord(c)
     ##Vocales
     if c == 65 or c == 65+32:
@@ -36,7 +37,7 @@ def filter(c):
 
     ##Simbolos puntuacion
 
-    if c in [44,46,58,59,92,124,126]:
+    if c in [32,44,46,58,59,92,124,126]:
         return 5
 
     ##Numeros 0-4, 5-9
@@ -63,19 +64,52 @@ def partial(d,s):
         out[i] = out[i]/t
     return out
 
+
+
 def main():
-    test = "HolaMundo Como estan todos y todos welcome"
-    d = []
+    test2 = "hola mundo como estan"
+    test =  "Hola Mundo Como estan"
     dd = []
+    dd2 = []
+    ddprom = 0
+    dd2prom = 0
     for i in test:
-        d.append(ord(i))
+        ddprom=ddprom+filter(i)
+    ddprom=ddprom/(25)
+
+    for i in test2:
+        dd2prom = dd2prom + filter(i)
+
+    dd2prom=dd2prom/(25)
+
+    for i in test:
         dd.append(filter(i))
+    for i in test2:
+        dd2.append(filter(i))
+    size=6
+    for i in range(0, len(dd)):
+        print str(i)+" "+str(dd[i])
 
-    print len(test)/25
-    print average(d)
-    print len(dd)/10
+    #print str(ddprom) + str(partial(dd, size))
+    #print str(dd2prom) + str(partial(dd2, size))
+    print test
+    print test2
+    ddnum = 0
+    ddres = partial(dd,size)
+    ddres.reverse()
+    for i in range(0, size):
+        ddnum = ddnum + ddres[i]*(10**i)
+    ddnum = ddnum + (ddprom)*(10**size)
+    print ddnum
+    dd2num = 0
+    dd2res = partial(dd2,size)
+    dd2res.reverse()
+    for i in range(0,size):
+        dd2num = dd2num + dd2res[i]*(10**i)
+    dd2num = dd2num + (dd2prom)*(10**size)
+    print dd2num
 
-    print partial(dd, 10)
+    print "diff:" + str(abs(ddnum-dd2num))
 
 if __name__ == "__main__":
     main()
