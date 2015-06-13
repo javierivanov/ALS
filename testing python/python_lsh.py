@@ -106,15 +106,16 @@ def __shortcut(c1):
     return generarHash(distribucionAproximada(c1,5), promedioParcial(c1,100), promedioParcial(c1,len(c1)))
 
 def main():
-    c = range(0,8)
+    c = range(0,9)
     c[0] = "crc-06"
     c[1] = "gas01"
     c[2] = "CCLSimpleClient"
-    c[3] = "TelCalPublisherEventNC-Consumer"
-    c[4] = "__process_event - Took too long to handle an 'PhaseCalReducedEvent' event: 2.257478 seconds."
-    c[5] = "__process_event - Took too long to handle an 'AtmosphereReducedEvent' event: 2.257478 seconds."
-    c[6] = "Main - No Primary Flux Calibrator up in the sky! Wait until a primary Flux Calibrator is up"
-    c[7] = "setExecError - Error in the script execution: ACSErr.ErrorTrace(file='/alma/ACS-12.1/ACSSW/bin/SBExecProcess.py', lineNum=138, routine='<module>', host='gas01', process='5159', thread='MainThread', timeStamp=136472328149382460L, sourceObject='', errorType=10100L, errorCode=5L, severity=Error, shortDescription='General ScriptExecutor runtime error', data=[], previousError=[ACSErr.ErrorTrace(file='/alma/ACS-12.1/ACSSW/bin/SBExecProcess.py', lineNum=132, routine='<module>', host='gas01', process='5159', thread='MainThread', timeStamp=136472328149346010L, sourceObject='', errorType=7L, errorCode=0L, severity=Error, shortDescription='A Python exception', data=[ACSErr.NameValue(name='Real Description', value='Request to exit from the interpreter.'), ACSErr.NameValue(name='Traceback', value='Traceback (most recent call last):\n  File \"/alma/ACS-12.1/ACSSW/bin/SBExecProcess.py\", line 108, in <module>\n    result = executor.runSource(srcCode)\n  File \"/alma/ACS-12.1/ACSSW/lib/python/site-packages/ScriptExec/Executor.py\", line 92, in runSource\n    exec source in self._globals, self._locals\n  File \"<string>\", line 140, in <module>\nSystemExit\n')], previousError=[])])"
+    c[3] = "omniORB--1298793584"
+    c[4] = "TelCalPublisherEventNC-Consumer"
+    c[5] = "__process_event - Took too long to handle an 'PhaseCalReducedEvent' event: 2.257478 seconds."
+    c[6] = "__process_event - Took too long to handle an 'AtmosphereReducedEvent' event: 2.257478 seconds."
+    c[7] = "Main - No Primary Flux Calibrator up in the sky! Wait until a primary Flux Calibrator is up"
+    c[8] = "setExecError - Error in the script execution: ACSErr.ErrorTrace(file='/alma/ACS-12.1/ACSSW/bin/SBExecProcess.py', lineNum=138, routine='<module>', host='gas01', process='5159', thread='MainThread', timeStamp=136472328149382460L, sourceObject='', errorType=10100L, errorCode=5L, severity=Error, shortDescription='General ScriptExecutor runtime error', data=[], previousError=[ACSErr.ErrorTrace(file='/alma/ACS-12.1/ACSSW/bin/SBExecProcess.py', lineNum=132, routine='<module>', host='gas01', process='5159', thread='MainThread', timeStamp=136472328149346010L, sourceObject='', errorType=7L, errorCode=0L, severity=Error, shortDescription='A Python exception', data=[ACSErr.NameValue(name='Real Description', value='Request to exit from the interpreter.'), ACSErr.NameValue(name='Traceback', value='Traceback (most recent call last):\n  File \"/alma/ACS-12.1/ACSSW/bin/SBExecProcess.py\", line 108, in <module>\n    result = executor.runSource(srcCode)\n  File \"/alma/ACS-12.1/ACSSW/lib/python/site-packages/ScriptExec/Executor.py\", line 92, in runSource\n    exec source in self._globals, self._locals\n  File \"<string>\", line 140, in <module>\nSystemExit\n')], previousError=[])])"
     for i in c:
         print str(__shortcut(i)/100) + " => " + i
         print "------------------------------------------------------------------------"
