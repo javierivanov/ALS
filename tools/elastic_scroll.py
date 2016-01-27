@@ -4,19 +4,21 @@ import json
 import pickle
 import os, sys
 
+import nilsimsa
+
 
 url_base = 'http://elk-master.osf.alma.cl:9200'
 headers = {}
 headers['Content-Type'] = 'application/json'
 results = list()
-
+size_pack = 10000
 def scroll():
     """
     Obtiene el primer resultado incluyendo el Scroll_id para continuar obteniendo los datos.
     """
-    url1 = url_base + '/aos-*/_search?q=LogLevel:Critical&scroll=1m'
+    url1 = url_base + '/aos-*/_search?q=LogLevel:Error&scroll=1m'
 
-    data1 = {"fields" : ["TimeStamp", "text"]}
+    data1 = {"fields" : ["TimeStamp", "text"], "size": size_pack}
     data1 = json.dumps(data1).encode('utf-8')
 
     req1 = urllib.Request(url1, data1, headers)
@@ -50,9 +52,9 @@ def main():
     size = int(results['total'])
     results = results['hits']
     aux = reescroll(scroll_id)
-    size-=10
+    size-=size_pack
     while len(aux) != 0:
-        size-=10
+        size-=size_pack
         print ("Reescrolling\tdata left: " + str(size))
         results = results + aux
         aux = reescroll(scroll_id)
