@@ -2,6 +2,8 @@
 import urllib.request as urllib
 import json
 
+import pickle
+
 url_base = 'http://elk-master.osf.alma.cl:9200'
 headers = {}
 headers['Content-Type'] = 'application/json'
@@ -22,7 +24,7 @@ def scroll():
     res1 = res1.read().decode('utf-8')
     res1 = json.loads(res1)
     scroll_id = res1["_scroll_id"]
-    return (scroll_id, res1['hits']['hits'])
+    return (scroll_id, res1['hits'])
 
 
 def reescroll(scroll_id):
@@ -44,13 +46,22 @@ def reescroll(scroll_id):
 
 def main():
     scroll_id, results = scroll()
+    size = int(results['total'])
+    results = results['hits']
     aux = reescroll(scroll_id)
-    i=0
+    size-=10
     while len(aux) != 0:
-        print ("Reescrolling" + str(i))
-        i+=1
+        size-=10
+        print ("Reescrolling\tdata left: " + str(size))
         results = results + aux
         aux = reescroll(scroll_id)
+    f = open("data.pickled", "wb")
+
+    print("Saving data...")
+    pickle.dump(results, f)
+    f.flush()
+    f.close()
+    print("End EXECUTION")
 
 if __name__ == '__main__':
     main()
