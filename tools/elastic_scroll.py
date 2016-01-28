@@ -11,7 +11,7 @@ url_base = 'http://elk-master.osf.alma.cl:9200'
 headers = {}
 headers['Content-Type'] = 'application/json'
 results = list()
-size_pack = 10000
+size_pack = 100000
 def scroll():
     """
     Obtiene el primer resultado incluyendo el Scroll_id para continuar obteniendo los datos.
