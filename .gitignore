@@ -4,6 +4,7 @@
 ### Binary data ###
 #Bin Files
 *.bin
+*.gz
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -83,4 +84,3 @@ target/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-
