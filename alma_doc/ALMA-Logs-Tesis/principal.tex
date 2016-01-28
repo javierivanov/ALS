@@ -1,0 +1,201 @@
+\documentclass[12pt]{article}
+\nonstopmode
+\usepackage{graphicx}
+%%\usepackage{times}
+%%languaje
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{color}
+\usepackage[labelfont=bf]{caption}
+
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{unsrtnat}
+
+ 
+ \geometry{
+ letterpaper,
+ left=3cm,
+ right=2cm,
+ top=2cm,
+ bottom=2cm,
+ }
+
+\hypersetup{
+	citecolor=black
+}
+
+%%colores y formateo XML
+\definecolor{maroon}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\lstdefinelanguage{XML}
+{
+  basicstyle=\ttfamily,
+  morestring=[s]{"}{"},
+  morecomment=[s]{?}{?},
+  morecomment=[s]{!--}{--},
+  commentstyle=\color{darkgreen},
+  moredelim=[s][\color{black}]{>}{<},
+  moredelim=[s][\color{red}]{\ }{=},
+  stringstyle=\color{blue},
+  identifierstyle=\color{maroon}
+}
+
+
+
+%% quitar guiones cuando las palabras sobrepasan el reglón
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+% Set the right side of the footer to be the page number
+\fancyfoot[R]{\thepage}
+
+
+\renewcommand*\rmdefault{iwona}
+
+
+
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=black}
+
+
+
+\begin{document}
+\begin{titlepage}
+
+
+ \vfill
+ \begin{minipage}{2.0cm}
+     \includegraphics*[width=3.0cm]{img/logo}
+ \end{minipage}
+ \hfill
+ \begin{minipage}{12cm}
+ 
+ \centering
+	\textbf{UNIVERSIDAD DE LA FRONTERA}\\
+	\textbf{FACULTAD DE INGENIERÍA Y CIENCIAS}\\
+	\textbf{DEPTO. CS. COMPUTACIÓN E INFORMÁTICA}
+	
+ 
+ \end{minipage}
+ 
+ 
+
+	
+	\vfill
+	
+	\textbf{“MINERÍA DE DATOS PARA LOGS DE ALMA COMMON SOFTWARE”}
+	\vfill
+	
+	
+	
+
+% Bottom of the page
+
+    \begin{flushright}
+	\rule{\linewidth}{.4eX}
+	\textbf{
+	ANTEPROYECTO DE TRABAJO DE TITULACIÓN\\
+	PARA OPTAR AL TÍTULO DE INGENIERO CIVIL INDUSTRIAL MENCIÓN INFORMÁTICA}
+	\rule{\linewidth}{.4ex}
+	
+	\vspace{2cm}
+	
+	\textbf{Profesor Guía:} DR. PATRICIO ABEL GALEAS ECHEVERRÍA\\
+	\textbf{Profesor Co-Guía:} DRA. GLORIA MILLARAY JULIA CURILEM SALDIAS
+	
+	\end{flushright}
+	
+	\vspace{1cm}
+	\begin{center}
+	    \textbf{
+	        JAVIER IGNACIO FUENTES MUÑOZ\\
+	        2015
+	    }
+    \end{center}
+	
+\end{titlepage}
+
+\newpage
+
+\begin{center}
+\textbf{ANTEPROYECTO DE TRABAJO DE TITULACIÓN}
+\end{center}
+
+\vspace{1cm}
+
+\begin{flushleft}
+\textbf{TÍTULO:} MINERÍA DE DATOS PARA LOGS DE ALMA COMMON SOFTWARE\\
+
+\vspace{1cm}
+
+\textbf{NOMBRE:} JAVIER IGNACIO FUENTES MUÑOZ\\
+
+\vspace{1cm}
+
+\textbf{Nº DE MATRÍCULA:} 17627072110\\
+
+\vspace{1cm}
+
+\textbf{CARRERA:} ING. CIVIL INDUSTRIAL MENCIÓN INFORMÁTICA\\
+
+\vspace{1cm}
+
+\textbf{NIVEL CURSADO:} XII
+
+\end{flushleft}
+
+\vfill
+
+
+\begin{center}
+\textbf{JAVIER IGNACIO FUENTES MUÑOZ\\Alumno}
+\vspace{1cm}
+
+\textbf{DR. PATRICIO ABEL GALEAS ECHEVERRÍA\\Profesor Guía}
+\vspace{1cm}
+
+\textbf{DRA. GLORIA MILLARAY JULIA CURILEM SALDIAS\\Profesor Co-Guía}
+\vspace{1cm}
+
+\textbf{MG. NATACHA ALEJANDRA PINO ACUÑA\\Directora de Carrera}
+
+\vspace{1cm}
+
+\textbf{DR. CARLOS FERNANDO CARES GALLARDO\\Director del Departamento}
+
+\end{center}
+\vspace{2cm}
+\setcounter{page}{0}
+\thispagestyle{empty}
+\newpage
+
+\tableofcontents
+
+\listoffigures
+
+\lstlistoflistings
+
+\setcounter{page}{0}
+\thispagestyle{empty}
+\newpage
+
+\include{intro}
+\include{antecedentes}
+\include{materiales}
+\include{programa}
+\include{nomenclatura}
+\include{bibliografia}
+
+\end{document}

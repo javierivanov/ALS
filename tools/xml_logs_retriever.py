@@ -10,13 +10,11 @@ import threading
 import time
 
 base_url = 'http://computing-logs.aiv.alma.cl/AOS/SYSTEM/'
-dfrom, dto = date(2015,12,28), date(2015,12,31)
-dfilter = 'Emergency'
+dfrom, dto = date(2015,12,23), date(2015,12,31)
+dfilters = ('Emergency', 'Alert', 'Critical', 'Error')
 threads_size = 20
 base_folder = "data/"
 list_days = list()
-
-
 
 
 def perdelta (start, end, delta):
@@ -54,7 +52,11 @@ def data_process(day, file_):
     lines = temp_file.readlines()
     results = list()
     for aux in lines:
-        if aux.startswith(b'<' + dfilter.encode('utf-8')):
+        startwith = False
+        for i in dfilters:
+            if aux.startswith(b'<' + i.encode('utf-8')):
+                startwith = True
+        if startwith:
             results.append(aux)
     temp_file.close()
     os.remove(base_folder+file_)
