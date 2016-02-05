@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<changelog xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2">
+  <version>2.1</version>
+  <task-change-set user="Javier Fuentes" date="2015-12-10T14:11:42.935Z" timestamp="2015-12-10T14:11:42.935Z">
+    <change idref="t2" to="t-1" to-position="1" resolved="yes">
+      <change idref="t2" attribute="effort" type="real" from="28800" to="720000"/>
+      <change idref="t2" attribute="noEarlierThanConstraintDate" type="date" to="2016-01-18T11:00:00.000Z"/>
+      <change idref="t2" attribute="title" type="string" to="Tarea 2"/>
+    </change>
+    <change idref="t3" to="t-1" to-position="2" resolved="yes">
+      <change idref="t3" attribute="effort" type="real" from="28800" to="576000"/>
+      <change idref="t3" attribute="noEarlierThanConstraintDate" type="date" to="2016-01-25T11:00:00.000Z"/>
+      <change idref="t3" attribute="title" type="string" to="Tarea 3"/>
+    </change>
+    <change idref="t4" to="t-1" to-position="3" resolved="yes">
+      <change idref="t4" attribute="effort" type="real" from="28800" to="432000"/>
+      <change idref="t4" attribute="noEarlierThanConstraintDate" type="date" to="2016-01-29T19:45:00.000Z"/>
+      <change idref="t4" attribute="title" type="string" to="Tarea 4"/>
+    </change>
+    <change idref="t5" to="t-1" to-position="4" resolved="yes">
+      <change idref="t5" attribute="effort" type="real" from="28800" to="1152000"/>
+      <change idref="t5" attribute="noEarlierThanConstraintDate" type="date" to="2015-12-28T11:00:00.000Z"/>
+      <change idref="t5" attribute="title" type="string" to="Tarea 5"/>
+    </change>
+    <change idref="t6" to="t-1" to-position="5" resolved="yes">
+      <change idref="t6" attribute="effort" type="real" from="28800" to="432000"/>
+      <change idref="t6" attribute="noEarlierThanConstraintDate" type="date" to="2016-01-18T11:00:00.000Z"/>
+      <change idref="t6" attribute="title" type="string" to="Tarea 6"/>
+    </change>
+    <change idref="t7" to="t-1" to-position="6" resolved="yes">
+      <change idref="t7" attribute="effort" type="real" from="28800" to="1008000"/>
+      <change idref="t7" attribute="noEarlierThanConstraintDate" type="date" to="2016-01-25T11:00:00.000Z"/>
+      <change idref="t7" attribute="title" type="string" to="Tarea 7"/>
+    </change>
+    <change idref="t8" to="t-1" to-position="7" resolved="yes">
+      <change idref="t8" attribute="effort" type="real" from="28800" to="576000"/>
+      <change idref="t8" attribute="noEarlierThanConstraintDate" type="date" to="2016-02-15T11:00:00.000Z"/>
+      <change idref="t8" attribute="title" type="string" to="Tarea 8"/>
+    </change>
+    <change idref="t1" attribute="effort" type="real" from="28800" to="1152000" resolved="yes"/>
+    <change idref="t1" attribute="noEarlierThanConstraintDate" type="date" to="2015-12-28T11:00:00.000Z" resolved="yes"/>
+  </task-change-set>
+  <task-change-set user="Javier Fuentes" date="2015-12-10T14:15:12.547Z" timestamp="2015-12-10T14:15:12.547Z">
+    <change idref="t1" attribute="title" type="string" from="Tarea 1" to=""/>
+    <change idref="t2" attribute="title" type="string" from="Tarea 2" to=""/>
+    <change idref="t3" attribute="title" type="string" from="Tarea 3" to=""/>
+    <change idref="t4" attribute="title" type="string" from="Tarea 4" to=""/>
+    <change idref="t5" attribute="title" type="string" from="Tarea 5" to=""/>
+    <change idref="t6" attribute="title" type="string" from="Tarea 6" to=""/>
+    <change idref="t7" attribute="title" type="string" from="Tarea 7" to=""/>
+    <change idref="t8" attribute="title" type="string" from="Tarea 8" to=""/>
+  </task-change-set>
+  <metadata-change-set user="Javier Fuentes" date="2015-12-10T14:11:42.934Z" timestamp="2015-12-10T14:11:42.934Z">
+    <change idref="m1" attribute="fixedDate" type="date" from="2007-01-01T20:00:00.000Z" to="2015-12-10T11:00:00.000Z" resolved="yes"/>
+  </metadata-change-set>
+</changelog>

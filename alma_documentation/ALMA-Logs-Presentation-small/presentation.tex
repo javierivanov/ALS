@@ -1,0 +1,147 @@
+\documentclass[11pt]{beamer}
+%\usetheme{metropolis}
+\usetheme{Madrid}
+%\usetheme{Frankfurt}
+\usecolortheme{dolphin}
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{media9}
+\usepackage{movie15}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{fancyvrb}
+
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\lstset{
+language=Java,
+commentstyle=\color{pgreen},
+keywordstyle=\color{pblue},
+stringstyle=\color{pred},
+basicstyle=\small\sffamily,
+numbers=left,
+numberstyle=\tiny,
+frame=tb,
+columns=fullflexible,
+showstringspaces=false
+}
+
+\definecolor{maroon}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\lstdefinelanguage{XML}
+{
+  basicstyle=\ttfamily,
+  morestring=[s]{"}{"},
+  morecomment=[s]{?}{?},
+  morecomment=[s]{!--}{--},
+  commentstyle=\color{darkgreen},
+  moredelim=[s][\color{black}]{>}{<},
+  moredelim=[s][\color{red}]{\ }{=},
+  stringstyle=\color{blue},
+  identifierstyle=\color{maroon},
+  numbers=none
+}
+
+\author{Javier Fuentes Muñoz \\ \texttt{j.fuentes06@ufromail.cl}}
+
+\title{DATA MINING}
+\subtitle{FOR ACS LOGs FILES} 
+%\setbeamercovered{transparent} 
+
+%\setbeamertemplate{navigation symbols}{} 
+\titlegraphic{\hfill\includegraphics[height=1.5cm]{logo}}
+
+\institute{University of La Frontera} 
+\date{\today} 
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+\section{Until now...}
+\begin{frame}{Until now}
+	\begin{itemize}
+		\item FSM and software design understanding.
+		\begin{itemize}
+			\item Defining partition criteria.
+			\item Communication interface.
+			\item Hierarchical structure.
+		\end{itemize}
+		\item Comparison of SCXML implementations.
+		\item Actual documentation understanding.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{FSM software design understanding.}
+\begin{figure}
+\centering
+	\includegraphics[height=5.8cm]{min}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\centering
+	\includegraphics[height=5.8cm]{complex.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Comparison of SCXML implementations.}
+\begin{figure}
+\centering
+	\includegraphics[scale=0.25]{tabla.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.25]{test}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Actual documentation understanding.}
+\centering
+\begin{tabular}{ c c }
+  \includegraphics[scale=0.35]{events.png} & \includegraphics[scale=0.2]{stateDiagram.pdf} \\
+  Events & State Machine \\
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+	\begin{alertblock}{On schedule}
+	
+		\begin{tabular}{p{10cm}|c}
+			Defining objectives and planning & \textbf{\color{green} DONE}\\
+			\hline
+			Studying kibana, logtash and elasticsearch & \textbf{\color{green} DONE} \\
+			\hline
+			Definition of the problematic & \textbf{\color{green} DONE} \\
+			\hline
+			Analyze the observation process, and design a UML diagram. & \textbf{\color{orange} DOING} \\
+			\hline
+			Search, compare(Comparative table) and define a Implementation of state machine model and the standard to use. & \textbf{\color{orange} DOING} \\
+			\hline
+			Develop a State Machine Model for the observation process of high level operations including hardware configurations & \textbf{\color{red} TO DO} \\
+			\hline
+			Design a architecture (Class Diagram and Activity Diagram) of the implementation & \textbf{\color{red} TO DO} \\
+			\hline
+			\ldots & \textbf{\color{red} TO DO} \\
+		\end{tabular}
+	\end{alertblock}
+\end{frame}
+
+
+\begin{frame}{Questions}
+\titlepage
+\end{frame}
+
+\end{document}
